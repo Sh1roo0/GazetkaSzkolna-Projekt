@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #101010;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 42px 16px 28px 16px;
+}
