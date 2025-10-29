@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Autorzy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="autorzy.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Gazetka szkolna</h1>
+        </div>
+        <ul id="menuList">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Poznaj autorów naszej gazetki szkolnej</h2>
+        <div class="authors-list">
+            <div class="author-block">
+                <span class="author-name">Filip Wróbel</span>
+                <span class="author-desc">
+                    Redaktor naczelny. Lubi odkrywać ciekawe historie wśród uczniów i dzielić się nimi w gazetce.
+                    Interesuje się dziennikarstwem i fotografią.
+                </span>
+                <button class="profile-btn"
+                    onclick="openModal('Filip Wróbel', 16, 'Młody programista z Pszczyny.')">Zobacz
+                    profil</button>
+            </div>
+            <div class="author-block">
+                <span class="author-name">Kamil Przygrodzki</span>
+                <span class="author-desc">
+                    Odpowiedzialny za stronę techniczną i sekcję rozrywki. Tworzy zagadki, krzyżówki oraz dba o sprawne
+                    działanie gazetki online.
+                </span>
+                <button class="profile-btn"
+                    onclick="openModal('Kamil Przygrodzki', 16, 'Pasjonat programowania i grafiki komputerowej. Specjalista od zagadek, krzyżówek i technicznych aspektów gazetki. Lubi pracę z zespołem.')">Zobacz
+                    profil</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop" id="modal-backdrop">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close" title="Zamknij">&times;</button>
+            <h3 class="modal-title" id="modal-title"></h3>
+            <div class="modal-text" id="modal-desc"></div>
+            <div class="modal-text" id="modal-age"></div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Gazetka Szkolna | Autorzy | Projekt edukacyjny
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="autorzy.js"></script>
+</body>
+
+</html>
