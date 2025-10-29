@@ -88,10 +88,10 @@ main{
 }
 .categories{
     width: 100%;
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .block{
     width: 15%;
@@ -120,6 +120,16 @@ main{
         transition: 0.5s;
     }
 }
+@media (max-width:1250px){
+    .categories{
+        flex-direction: column;
+    }
+    .block{
+        margin: 30px 0 0 0;
+        width: 100%;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -144,23 +154,23 @@ main{
         <div class="categories">
             <div class="block">
                 <h1>Kultura</h1>
-                <div class="pasek" style="width: 38%;"></div>
+                <div class="pasek" style="width: 110px;"></div>
             </div>
             <div class="block">
                 <h1>Sport</h1>
-                <div class="pasek" style="width: 30%;" ></div>
+                <div class="pasek" style="width: 90px;" ></div>
             </div>
             <div class="block">
                 <h1>Nauka</h1>
-                <div class="pasek" style="width: 34%;"></div>
+                <div class="pasek" style="width: 100px"></div>
             </div>
             <div class="block">
                 <h1>Życie szkoły</h1>
-                <div class="pasek"style="width: 63%;"></div>
+                <div class="pasek"style="width: 190px"></div>
             </div>
             <div class="block">
                 <h1>Opinie</h1>
-                <div class="pasek"style="width: 34%;"></div>
+                <div class="pasek"style="width: 100px"></div>
             </div>
 
         </div>
