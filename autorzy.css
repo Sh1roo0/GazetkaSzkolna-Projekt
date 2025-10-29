@@ -102,6 +102,10 @@ h2 {
     margin-bottom: 14px;
 }
 
+img {
+    max-width: 150px;
+}
+
 @media (max-width:520px) {
     .container {
         padding: 23px 5vw 15px 5vw;
