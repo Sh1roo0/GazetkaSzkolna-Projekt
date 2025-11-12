@@ -217,23 +217,23 @@ main{
 
         <div class="categories">
             <div class="block">
-                <h1>Kultura</h1>
+                <h1 id="kultura">Kultura</h1>
                 <div class="pasek" style="width: 110px;"></div>
             </div>
             <div class="block">
-                <h1>Sport</h1>
+                <h1 id="sport">Sport</h1>
                 <div class="pasek" style="width: 90px;" ></div>
             </div>
             <div class="block">
-                <h1>Nauka</h1>
+                <h1 id="nauka">Nauka</h1>
                 <div class="pasek" style="width: 100px"></div>
             </div>
             <div class="block">
-                <h1>Życie szkoły</h1>
+                <h1 id="zycie-szkoly">Życie szkoły</h1>
                 <div class="pasek"style="width: 190px"></div>
             </div>
             <div class="block">
-                <h1>Opinie</h1>
+                <h1 id="opinie">Opinie</h1>
                 <div class="pasek"style="width: 100px"></div>
             </div>
 
@@ -451,9 +451,36 @@ const categories = [
 
 const main = document.querySelector("main");
 
-posts.forEach(post => {
+// posts.forEach(post => {
 
-    const category = categories.find(c => c.id === post.categoryId);
+//     const category = categories.find(c => c.id === post.categoryId);
+//     const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
+//     main.innerHTML += `
+//       <article>
+//         <img src="${post.cover}" alt="${post.title}">
+//         <div class="text-wrapper">
+//           <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
+//           <h1>${post.title}</h1>
+//           <p>${post.excerpt}</p>
+//           <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
+//         </div>
+//       </article>
+//     `;
+
+// });
+
+
+kultura = document.getElementById("kultura");
+sport = document.getElementById("sport");
+nauka = document.getElementById("nauka");
+zycieszkoly = document.getElementById("zycie-szkoly");
+opinie = document.getElementById("opinie");
+
+kultura.addEventListener("click", function() {
+    main.innerHTML ="";
+  posts.forEach(post => {
+    if(post.categoryId == "kultura"){
+            const category = categories.find(c => c.id === post.categoryId);
     const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
     main.innerHTML += `
       <article>
@@ -466,8 +493,106 @@ posts.forEach(post => {
         </div>
       </article>
     `;
+    }
+});
+    
 
 });
+
+sport.addEventListener("click", function() {
+    main.innerHTML ="";
+  posts.forEach(post => {
+    if(post.categoryId == "sport"){
+            const category = categories.find(c => c.id === post.categoryId);
+    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
+    main.innerHTML += `
+      <article>
+        <img src="${post.cover}" alt="${post.title}">
+        <div class="text-wrapper">
+          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
+          <h1>${post.title}</h1>
+          <p>${post.excerpt}</p>
+          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
+        </div>
+      </article>
+    `;
+    }
+});
+    
+
+});
+
+
+nauka.addEventListener("click", function() {
+    main.innerHTML ="";
+  posts.forEach(post => {
+    if(post.categoryId == "nauka"){
+            const category = categories.find(c => c.id === post.categoryId);
+    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
+    main.innerHTML += `
+      <article>
+        <img src="${post.cover}" alt="${post.title}">
+        <div class="text-wrapper">
+          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
+          <h1>${post.title}</h1>
+          <p>${post.excerpt}</p>
+          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
+        </div>
+      </article>
+    `;
+    }
+});
+    
+
+});
+
+
+zycieszkoly.addEventListener("click", function() {
+    main.innerHTML ="";
+  posts.forEach(post => {
+    if(post.categoryId == "zycie-szkoly"){
+            const category = categories.find(c => c.id === post.categoryId);
+    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
+    main.innerHTML += `
+      <article>
+        <img src="${post.cover}" alt="${post.title}">
+        <div class="text-wrapper">
+          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
+          <h1>${post.title}</h1>
+          <p>${post.excerpt}</p>
+          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
+        </div>
+      </article>
+    `;
+    }
+});
+    
+
+});
+
+opinie.addEventListener("click", function() {
+    main.innerHTML ="";
+  posts.forEach(post => {
+    if(post.categoryId == "opinia"){
+            const category = categories.find(c => c.id === post.categoryId);
+    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
+    main.innerHTML += `
+      <article>
+        <img src="${post.cover}" alt="${post.title}">
+        <div class="text-wrapper">
+          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
+          <h1>${post.title}</h1>
+          <p>${post.excerpt}</p>
+          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
+        </div>
+      </article>
+    `;
+    }
+});
+    
+
+});
+ 
 
     </script>
     <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
