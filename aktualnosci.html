@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,14 +59,37 @@ nav ul li a{
     font-size: 30px;
 }
 
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #585858;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
 main{
 display: flex;
-flex-wrap: wrap;
-justify-content: center;
+align-items: center;
+flex-direction: column;
 width: 100%;
 }
 article{
-    width: 30%;
+    width: 50%;
     height: 500px;
     background-color: white;
     display: flex;
@@ -77,7 +100,7 @@ article{
 }
 article img{
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 5px;
 }
 p span{
@@ -122,76 +145,19 @@ cursor: pointer;
     width: 80%;
    }
 }
-
-@media (max-width:600px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
-        background: #585858;
-        gap: 0;
-        overflow: hidden;
-    }
-    nav ul li{
-        padding: 20px;
-        padding-top: 0;
-    }
-    .menu-icon{
-        display: block;
-    }
-    #menuList{
-        transition: all 0.5s;
-    }
-}
-main{
-    width: 100%;
+.aktualnosci{
     display: flex;
-}
-.categories{
-    width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    
 }
-.block{
-    width: 15%;
-    height: 70px;
-    margin: 0 10px 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    border-radius: 100px;
+.bar{
+    height: 5px;
+    width: 40px;
+    background-color: lawngreen;
 }
-.block h1{
-    font-size: 30px;
-}
-.pasek{
-    width: 40%;
-    height: 4px;
-    background-color: red;
-}
-.block h1{
-    cursor: pointer;
-}
-.block:hover{
-    .pasek {
-        transform: scale(120%) ;
-        transition: 0.5s;
-    }
-}
-@media (max-width:1250px){
-    .categories{
-        flex-direction: column;
-    }
-    .block{
-        margin: 30px 0 0 0;
-        width: 100%;
-    }
+.aktualnosci h1{
+    color: lawngreen;
+    margin: 0 10px;
+    font-size: 40pxs;
 }
 nav ul li a {
   border-radius: 17px;
@@ -221,73 +187,19 @@ nav ul li a:hover {
         </div>
     </nav>
 
-    <div class="Kategorie">
-
-        <div class="categories">
-            <div class="block">
-                <h1 id="kultura">Kultura</h1>
-                <div class="pasek" style="width: 110px;"></div>
-            </div>
-            <div class="block">
-                <h1 id="sport">Sport</h1>
-                <div class="pasek" style="width: 90px;" ></div>
-            </div>
-            <div class="block">
-                <h1 id="nauka">Nauka</h1>
-                <div class="pasek" style="width: 100px"></div>
-            </div>
-            <div class="block">
-                <h1 id="zycie-szkoly">Życie szkoły</h1>
-                <div class="pasek"style="width: 190px"></div>
-            </div>
-            <div class="block">
-                <h1 id="opinie">Opinie</h1>
-                <div class="pasek"style="width: 100px"></div>
-            </div>
-
-        </div>
-
-    </div>
 
      <div class="container">
         
 
     <main>
-        <!-- <article>
-            <img src="https://picsum.photos/400/200?random=1">
-            <div class="text-wrapper">
-                <p><span>June 30 2024</span> |  Szkoła</p>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum corrupti voluptate beatae modi sapiente maiores numquam recusandae, praesentium, nesciunt aliquam? Autem maxime ratione molestiae, accusamus esse similique eum explicabo!</p>
-
-            <a href="/">Read more</a>
-            </div>
-            
-        </article>
-        <article>
-            <img src="https://picsum.photos/400/200?random=2">
-            <div class="text-wrapper">
-                <p><span>June 30 2024</span> |  Szkoła</p>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum corrupti voluptate beatae modi sapiente maiores numquam recusandae, praesentium, nesciunt aliquam? Autem maxime ratione molestiae, accusamus esse similique eum explicabo!</p>
-
-            <a href="/">Read more</a>
-            </div>
-            
-        </article>
-        <article>
-            <img src="https://picsum.photos/400/200?random=3">
-            <div class="text-wrapper">
-                <p><span>June 30 2024</span> |  Szkoła</p>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum corrupti voluptate beatae modi sapiente maiores numquam recusandae, praesentium, nesciunt aliquam? Autem maxime ratione molestiae, accusamus esse similique eum explicabo!</p>
-
-            <a href="/">Read more</a>
-            </div>
-            
-        </article> -->
+      <div class="aktualnosci">
+        <div class="bar"></div>
+        <h1>Aktualności</h1>
+        <div class="bar"></div>
+      </div>
     </main>
     </div>
+
 
      <script>
         let burger = document.getElementById("burger");
@@ -309,12 +221,7 @@ nav ul li a:hover {
     </script>
 
     <script>
-        
-        
-
-
-
-           const posts = [
+        const posts = [
     {
         id: "premiera-teatralna-mlodych",
         slug: "premiera-teatralna-mlodych",
@@ -457,9 +364,6 @@ nav ul li a:hover {
     },
 ];
 
-
-
-
 const categories = [
   { id: "kultura", name: "Kultura" },
   { id: "sport", name: "Sport" },
@@ -470,167 +374,33 @@ const categories = [
 
 const main = document.querySelector("main");
 
+posts.sort((a,b) => new Date(a.date) - new Date(b.date));
 posts.forEach(post => {
   
     const category = categories.find(c => c.id === post.categoryId);
     const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-    main.innerHTML += `
-      <article>
-        <img src="${post.cover}" alt="${post.title}">
-        <div class="text-wrapper">
-          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-          <h1>${post.title}</h1>
-          <p>${post.excerpt}</p>
-          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-        </div>
-      </article>
-    `;
-  
-});
-// posts.forEach(post => {
-
-//     const category = categories.find(c => c.id === post.categoryId);
-//     const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-//     main.innerHTML += `
-//       <article>
-//         <img src="${post.cover}" alt="${post.title}">
-//         <div class="text-wrapper">
-//           <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-//           <h1>${post.title}</h1>
-//           <p>${post.excerpt}</p>
-//           <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-//         </div>
-//       </article>
-//     `;
-
-// });
-
-
-kultura = document.getElementById("kultura");
-sport = document.getElementById("sport");
-nauka = document.getElementById("nauka");
-zycieszkoly = document.getElementById("zycie-szkoly");
-opinie = document.getElementById("opinie");
-
-kultura.addEventListener("click", function() {
-    main.innerHTML ="";
-  posts.forEach(post => {
-    if(post.categoryId == "kultura"){
-            const category = categories.find(c => c.id === post.categoryId);
-    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-    main.innerHTML += `
-      <article>
-        <img src="${post.cover}" alt="${post.title}">
-        <div class="text-wrapper">
-          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-          <h1>${post.title}</h1>
-          <p>${post.excerpt}</p>
-          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-        </div>
-      </article>
-    `;
-    }
-});
-    
+   main.innerHTML += `
+  <article>
+    <img src="${post.cover}" alt="${post.title}" loading="lazy">
+    <div class="text-wrapper">
+      <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
+      <h1>${post.title}</h1>
+      <p>${post.excerpt}</p>
+      <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
+    </div>
+  </article>
+`;
 
 });
+</script>
 
-sport.addEventListener("click", function() {
-    main.innerHTML ="";
-  posts.forEach(post => {
-    if(post.categoryId == "sport"){
-            const category = categories.find(c => c.id === post.categoryId);
-    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-    main.innerHTML += `
-      <article>
-        <img src="${post.cover}" alt="${post.title}">
-        <div class="text-wrapper">
-          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-          <h1>${post.title}</h1>
-          <p>${post.excerpt}</p>
-          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-        </div>
-      </article>
-    `;
-    }
+<script>
+window.addEventListener('DOMContentLoaded', ()=>{
+  document.querySelectorAll('article').forEach((a,i)=>{
+    setTimeout(() => a.classList.add('loaded'), 100 + 120*i);
+  });
 });
-    
-
-});
-
-
-nauka.addEventListener("click", function() {
-    main.innerHTML ="";
-  posts.forEach(post => {
-    if(post.categoryId == "nauka"){
-            const category = categories.find(c => c.id === post.categoryId);
-    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-    main.innerHTML += `
-      <article>
-        <img src="${post.cover}" alt="${post.title}">
-        <div class="text-wrapper">
-          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-          <h1>${post.title}</h1>
-          <p>${post.excerpt}</p>
-          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-        </div>
-      </article>
-    `;
-    }
-});
-    
-
-});
-
-
-zycieszkoly.addEventListener("click", function() {
-    main.innerHTML ="";
-  posts.forEach(post => {
-    if(post.categoryId == "zycie-szkoly"){
-            const category = categories.find(c => c.id === post.categoryId);
-    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-    main.innerHTML += `
-      <article>
-        <img src="${post.cover}" alt="${post.title}">
-        <div class="text-wrapper">
-          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-          <h1>${post.title}</h1>
-          <p>${post.excerpt}</p>
-          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-        </div>
-      </article>
-    `;
-    }
-});
-    
-
-});
-
-opinie.addEventListener("click", function() {
-    main.innerHTML ="";
-  posts.forEach(post => {
-    if(post.categoryId == "opinia"){
-            const category = categories.find(c => c.id === post.categoryId);
-    const date = new Date(post.date).toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
-    main.innerHTML += `
-      <article>
-        <img src="${post.cover}" alt="${post.title}">
-        <div class="text-wrapper">
-          <p><span>${date}</span> | ${category ? category.name : "Inne"}</p>
-          <h1>${post.title}</h1>
-          <p>${post.excerpt}</p>
-          <a href="post.html?slug=${post.slug}">Czytaj więcej</a>
-        </div>
-      </article>
-    `;
-    }
-});
-    
-
-});
- 
-
+</script>
     </script>
-    
 </body>
 </html>

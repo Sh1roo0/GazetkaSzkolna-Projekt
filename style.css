@@ -60,7 +60,7 @@ nav ul li a{
         right: 0;
         flex-direction: column;
         text-align: center;
-        background: #585858;
+       background: #585858;
         gap: 0;
         overflow: hidden;
     }
@@ -75,11 +75,16 @@ nav ul li a{
         transition: all 0.5s;
     }
 }
+.hero-wrapper{
+    display: flex;
+    justify-content: center;
+}
 main{
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 width: 100%;
+align-items: center;
 }
 article{
     width: 30%;
@@ -251,4 +256,18 @@ article {
 article.loaded {
   opacity: 1;
   transform: translateY(0);
+}
+.aktualnosci{
+    display: flex;
+    align-items: center;
+}
+.bar{
+    height: 5px;
+    width: 40px;
+    background-color: lawngreen;
+}
+.aktualnosci h1{
+    color: lawngreen;
+    margin: 0 10px;
+    font-size: 40pxs;
 }

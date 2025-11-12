@@ -8,19 +8,19 @@
 </head>
 <body>
 
-    <nav>
+   <nav>
         <div class="logo">
-            <h1>Gazetka szkolna</h1>
+            <h1>Gazetka Szkolna</h1>
         </div>
-<ul id="menuList">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="autorzy.html">Autorzy</a></li>
-      <li><a href="artykuly.html">Kategorie</a></li>
-      <li><a href="aktualnosci.html">Aktualności</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
+        <ul id="menuList">
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="autorzy.html">Autorzy</a></li>
+            <li><a href="aktualnosci.html">Aktualności</a></li>
+            <li><a href="artykuly.html">Kategorie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
         <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+           <svg xmlns="http://www.w3.org/2000/svg" id="burger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
         </div>
     </nav>
 
@@ -39,41 +39,18 @@
 
     <div class="container">
         
+        <div class="hero-wrapper">
+             <div class="aktualnosci">
+        <div class="bar"></div>
+        <h1>Wyróżnione Artykuły</h1>
+        <div class="bar"></div>
+      </div>
+        </div>
+
+       
 
     <main>
-        <!-- <article>
-            <img src="https://picsum.photos/400/200?random=1">
-            <div class="text-wrapper">
-                <p><span>June 30 2024</span> |  Szkoła</p>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum corrupti voluptate beatae modi sapiente maiores numquam recusandae, praesentium, nesciunt aliquam? Autem maxime ratione molestiae, accusamus esse similique eum explicabo!</p>
-
-            <a href="/">Read more</a>
-            </div>
-            
-        </article>
-        <article>
-            <img src="https://picsum.photos/400/200?random=2">
-            <div class="text-wrapper">
-                <p><span>June 30 2024</span> |  Szkoła</p>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum corrupti voluptate beatae modi sapiente maiores numquam recusandae, praesentium, nesciunt aliquam? Autem maxime ratione molestiae, accusamus esse similique eum explicabo!</p>
-
-            <a href="/">Read more</a>
-            </div>
-            
-        </article>
-        <article>
-            <img src="https://picsum.photos/400/200?random=3">
-            <div class="text-wrapper">
-                <p><span>June 30 2024</span> |  Szkoła</p>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum corrupti voluptate beatae modi sapiente maiores numquam recusandae, praesentium, nesciunt aliquam? Autem maxime ratione molestiae, accusamus esse similique eum explicabo!</p>
-
-            <a href="/">Read more</a>
-            </div>
-            
-        </article> -->
+        
     </main>
     </div>
     
@@ -94,19 +71,7 @@ document.getElementById('goTopBtn').onclick = function() {
 </script>
 
     <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "300px";
-            }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-        
+       
 
         // Pobieranie artykulow z tablicy 
 
@@ -292,6 +257,24 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 
     
-    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <script>
+        let burger = document.getElementById("burger");
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+       burger.addEventListener("click", function toggleMenu(){
+         if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+       })   
+           
+        
+        
+    </script>
+    
 </body>
 </html>
