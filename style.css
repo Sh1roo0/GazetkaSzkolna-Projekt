@@ -14,13 +14,15 @@ html,body{
     margin: 0 auto;
     padding: 42px 16px 28px 16px;
 }
+nav {
+    position: relative; 
+}
 nav{
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #585858;
-    position: relative;
     height: 70px;
 }
 
@@ -51,7 +53,9 @@ nav ul li a{
     color: #fff;
     font-size: 30px;
 }
-
+#menuList {
+    z-index: 100; 
+}
 @media (max-width:600px) {
     nav ul{
         position: absolute;
