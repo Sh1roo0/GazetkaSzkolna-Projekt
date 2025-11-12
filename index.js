@@ -1,4 +1,43 @@
 
+window.onscroll = function() {
+  document.getElementById('goTopBtn').style.display =
+    (window.scrollY > 220) ? 'block' : 'none';
+};
+document.getElementById('goTopBtn').onclick = function() {
+  window.scrollTo({top:0, behavior:"smooth"});
+};
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  document.querySelectorAll('article').forEach((a,i)=>{
+    setTimeout(() => a.classList.add('loaded'), 100 + 120*i);
+  });
+});
+
+
+
+    
+
+        let burger = document.getElementById("burger");
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+       burger.addEventListener("click", function toggleMenu(){
+         if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+       })   
+           
+        
+        
+
 
 const posts = [
     {
