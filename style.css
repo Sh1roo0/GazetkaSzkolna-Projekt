@@ -269,5 +269,20 @@ article.loaded {
 .aktualnosci h1{
     color: lawngreen;
     margin: 0 10px;
-    font-size: 40pxs;
+    font-size: 40px;
+}
+@media(max-width:580px){
+    .aktualnosci h1{
+        font-size: 30px;
+    }
+}
+@media(max-width:450px){
+    .aktualnosci h1{
+        font-size: 25px;
+    }
+}
+@media(max-width:377px){
+    .aktualnosci h1{
+        font-size: 20px;
+    }
 }
